@@ -67,7 +67,8 @@ func (stream *Stream) Run(doneChannel chan bool) {
 
 	processor := stream.createProcessor(callback)
 
-	ctx, cancel := context.WithCancel(context.Background())
+	
+	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGINT, syscall.SIGTERM)
 	done := make(chan struct{})
 	go func() {
 		defer close(done)
