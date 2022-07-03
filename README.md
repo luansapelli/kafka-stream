@@ -21,7 +21,7 @@ Goka extends the concept of Kafka consumer groups by linking a state table to th
 - Execute the command `make create_topics` to create the input topic.
 - Set the environment vars (env.example).
 - Execute the command `make run` if you have godotenv installed or `go run main.go` to start the application.
-- Send a message to Input topic and see the magic.
+- Send a message to Input topic.
 
 
 ## Kowl 
